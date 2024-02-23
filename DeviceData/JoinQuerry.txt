@@ -1,0 +1,14 @@
+Insert into table EmpDv(EmployeeCode,DepartmentId,DepartmentsName) SELECT e.EmployeeCode ,e.DepartmentId,d.DepartmentsName FROM Employees e JOIN Departments d on e.DepartmentId = d.DepartmentId;
+
+SELECT e.EmployeeName ,e.EmployeeCode,e.DepartmentId,d.DepartmentsName FROM Employees e JOIN Departments d on e.DepartmentId = d.DepartmentId;
+
+
+
+INSERT INTO EmpDv(EmployeeCode,DepartmentId,DepartmentsName) SELECT e.EmployeeCode ,e.DepartmentId,d.DepartmentsName FROM Employees e JOIN Departments d on e.DepartmentId = d.DepartmentId;
+
+CREATE TABLE EmpDv(EmployeeCode int,DepartmentId int,DepartmentsName varchar(255))
+INSERT INTO EmpDv(EmployeeCode,DepartmentId,DepartmentsName) SELECT e.EmployeeCode ,e.DepartmentId,d.DepartmentsName FROM Employees e JOIN Departments d on e.DepartmentId = d.DepartmentId;
+
+
+CREATE TABLE Dev(EmployeeCode int,DepartmentId int,DepartmentsName varchar(255),LogDate datetime ,C1 varchar(255),DeviceId int)
+Insert into table Dev(EmployeeCode,DepartmentId,DepartmentsName,LogDate,C1,DeviceId) SELECT e.EmployeeCode ,e.DepartmentId,e.DepartmentsName,d.LogDate,d.C1,d.DeviceId FROM EmpDv e JOIN DeviceLogs_9_2023 d on e.EmployeeCode = d.UserId;
