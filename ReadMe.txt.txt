@@ -7,3 +7,4 @@ Attendance record reports
 4: Map roll number with student other data like name
 5: Bellow 70% zoom attendance - No certificate [typically for zoom moduler batches] 
 6: Auto marge data [automatically process data per week
+7: Manual punch device [DBDA stud regularly punching to DAC device]
